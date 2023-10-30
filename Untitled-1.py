@@ -30,3 +30,13 @@ def insord(k,xs):
 lista=[0,0,1,3,4,5,6,6,8,18,24,248,242]
 
 print(insord(9, lista))
+
+def ord(xs):
+    """
+    função para ordenar uma lista
+    """
+    if len(xs)==1: return xs
+    else: return insord(xs[0], ord(xs[1:]))
+
+list=[2,5,4,1,8,9,75,81,24,5,4,5,4,5,4]
+print(ord(list))
